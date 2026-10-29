@@ -45,6 +45,7 @@
                 You are signed in as <strong th:text="${currentUser.role}">STUDENT</strong>.
             </p>
             <p><a class="button" href="/courses">Browse courses</a></p>
+            <p><a class="nav-link" href="/tutoring">Open online tutoring</a></p>
             <p th:if="${currentUser != null and currentUser.role.name() == 'INSTRUCTOR'}"><a class="nav-link" href="/instructor/courses">Manage my courses</a></p>
             <p th:if="${currentUser != null and currentUser.role.name() == 'ADMIN'}"><a class="nav-link" href="/admin">Open administrator dashboard</a></p>
         </section>
@@ -56,6 +57,7 @@
                     Learn through lessons, video resources,
                     and downloadable study materials.
                 </p>
+                <a class="nav-link" href="/courses">Open course catalog</a>
             </article>
 
             <article>
@@ -64,6 +66,7 @@
                     Test your understanding and follow
                     your learning progress.
                 </p>
+                <a class="nav-link" href="/courses">Open courses and quizzes</a>
             </article>
 
             <article>
@@ -72,6 +75,7 @@
                     Book sessions with instructors
                     for individual support.
                 </p>
+                <a class="nav-link" href="/tutoring">Open tutoring slots</a>
             </article>
         </section>
     </main>
