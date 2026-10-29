@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title th:text="${platformName}">Learning Platform</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header>
+        <span class="brand">LearnTogether</span>
+        <span class="course-label">
+            Software Engineering &amp; Design Pattern Lab
+        </span>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <p class="eyebrow">LEARN AT YOUR OWN PACE</p>
+
+            <h1 th:text="${platformName}">
+                E-Learning &amp; Online Tutoring Platform
+            </h1>
+
+            <p class="description">
+                Explore courses, practice your skills, and receive
+                individual guidance from instructors.
+            </p>
+        </section>
+
+        <section class="features" aria-label="Planned platform features">
+            <article>
+                <h2>Structured Courses</h2>
+                <p>
+                    Learn through lessons, video resources,
+                    and downloadable study materials.
+                </p>
+            </article>
+
+            <article>
+                <h2>Quizzes &amp; Progress</h2>
+                <p>
+                    Test your understanding and follow
+                    your learning progress.
+                </p>
+            </article>
+
+            <article>
+                <h2>Online Tutoring</h2>
+                <p>
+                    Book sessions with instructors
+                    for individual support.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Developed by Chondrima and Ishrat
+    </footer>
+</body>
+</html>

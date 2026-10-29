@@ -1,0 +1,17 @@
+# Generated build files
+target/
+
+# Local editor settings
+.vscode/
+.idea/
+*.iml
+
+# Local configuration and uploads
+.env
+application-local.properties
+uploads/
+
+# Logs and Windows files
+*.log
+Thumbs.db
+Desktop.ini
