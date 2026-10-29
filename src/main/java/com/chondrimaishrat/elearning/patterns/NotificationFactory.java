@@ -1,0 +1,1 @@
+package com.chondrimaishrat.elearning.patterns; public final class NotificationFactory {private NotificationFactory(){} public static String create(String type,String message){return switch(type){case "EMAIL"->"Email notification: "+message; case "IN_APP"->"In-app notification: "+message; default->"Notification: "+message;};}}

@@ -1,0 +1,1 @@
+package com.chondrimaishrat.elearning.patterns; import java.math.BigDecimal; import java.util.UUID; public class SimulatedBkashPayment implements PaymentStrategy { public String pay(BigDecimal amount){return "BKASH-"+UUID.randomUUID();} }

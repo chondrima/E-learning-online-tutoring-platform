@@ -10,10 +10,19 @@
 </head>
 <body>
     <header>
-        <span class="brand">LearnTogether</span>
-        <span class="course-label">
-            Software Engineering &amp; Design Pattern Lab
-        </span>
+        <a class="brand" href="/">LearnTogether</a>
+        <nav class="header-actions" th:if="${currentUser == null}">
+            <a class="nav-link" href="/login">Login</a>
+            <a class="button small-button" href="/register">Create account</a>
+        </nav>
+        <nav class="header-actions" th:if="${currentUser != null}">
+            <span class="welcome-message">
+                Hello, <strong th:text="${currentUser.fullName}">User</strong>
+            </span>
+            <form th:action="@{/logout}" method="post">
+                <button class="nav-link logout-button" type="submit">Logout</button>
+            </form>
+        </nav>
     </header>
 
     <main>
@@ -28,6 +37,16 @@
                 Explore courses, practice your skills, and receive
                 individual guidance from instructors.
             </p>
+
+            <p class="login-hint" th:if="${currentUser == null}">
+                Create an account to begin learning, or login if you already have one.
+            </p>
+            <p class="login-hint" th:if="${currentUser != null}">
+                You are signed in as <strong th:text="${currentUser.role}">STUDENT</strong>.
+            </p>
+            <p><a class="button" href="/courses">Browse courses</a></p>
+            <p th:if="${currentUser != null and currentUser.role.name() == 'INSTRUCTOR'}"><a class="nav-link" href="/instructor/courses">Manage my courses</a></p>
+            <p th:if="${currentUser != null and currentUser.role.name() == 'ADMIN'}"><a class="nav-link" href="/admin">Open administrator dashboard</a></p>
         </section>
 
         <section class="features" aria-label="Planned platform features">

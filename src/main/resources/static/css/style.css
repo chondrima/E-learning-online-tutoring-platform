@@ -23,6 +23,30 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: #3949ab;
+    text-decoration: none;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-message,
+.login-hint {
+    color: #647086;
+}
+
+.small-button {
+    margin: 0;
+    padding: 10px 16px;
+}
+
+.logout-button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
 }
 
 .course-label {
@@ -134,13 +158,22 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #bcc6d8;
     border-radius: 8px;
     font: inherit;
 }
+
+textarea { min-height: 130px; resize: vertical; }
+.page-heading { margin-bottom: 30px; }
+.empty-state, .list-section { padding: 28px; background: white; border: 1px solid #e0e5ef; border-radius: 14px; }
+.list-section article { margin-top: 15px; }
+.wide-page { max-width: 900px; }
+.admin-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.success-message { margin: 18px 0; padding: 12px; border-radius: 8px; color: #176b45; background: #e8f7ef; }
 
 form .button {
     margin-top: 18px;

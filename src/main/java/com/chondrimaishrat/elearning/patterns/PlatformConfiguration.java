@@ -1,0 +1,1 @@
+package com.chondrimaishrat.elearning.patterns; public final class PlatformConfiguration {private static final PlatformConfiguration INSTANCE=new PlatformConfiguration(); private PlatformConfiguration(){} public static PlatformConfiguration getInstance(){return INSTANCE;} public String platformName(){return "LearnTogether";} }

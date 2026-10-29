@@ -1,0 +1,2 @@
+package com.chondrimaishrat.elearning.tutoring; import jakarta.persistence.LockModeType; import org.springframework.data.jpa.repository.*; import java.util.*;
+public interface TutoringSlotRepository extends JpaRepository<TutoringSlot,Long>{@Lock(LockModeType.PESSIMISTIC_WRITE) @Query("select s from TutoringSlot s where s.id=:id") Optional<TutoringSlot> lockById(Long id); List<TutoringSlot> findByStatusOrderByStartsAtAsc(SlotStatus status);}
