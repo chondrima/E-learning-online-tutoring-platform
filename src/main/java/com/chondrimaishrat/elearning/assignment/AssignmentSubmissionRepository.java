@@ -1,0 +1,1 @@
+package com.chondrimaishrat.elearning.assignment; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface AssignmentSubmissionRepository extends JpaRepository<AssignmentSubmission,Long>{boolean existsByAssignmentIdAndStudentId(Long a,Long s); List<AssignmentSubmission> findByAssignmentCourseInstructorId(Long id);}
