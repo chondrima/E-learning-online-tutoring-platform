@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration complete | LearnTogether</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <a class="brand" href="/">LearnTogether</a>
+    <a class="nav-link" href="/">Home</a>
+</header>
+
+<main class="form-page">
+    <section class="form-card">
+        <p class="eyebrow">REGISTRATION COMPLETE</p>
+        <h1>Account created</h1>
+
+        <p class="description" th:if="${role == 'STUDENT'}">
+            Your Student account is active. Login will be added next.
+        </p>
+
+        <p class="description" th:if="${role == 'INSTRUCTOR'}">
+            Your Instructor account is pending administrator approval.
+        </p>
+
+        <a class="button" href="/">Return to home</a>
+    </section>
+</main>
+</body>
+</html>
